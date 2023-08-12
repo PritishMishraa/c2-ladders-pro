@@ -1,9 +1,6 @@
-import { ThemeToggle } from "@/components/theme-toggle";
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div>
+    <div className="container">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
         C2 Ladders Pro
       </h1>

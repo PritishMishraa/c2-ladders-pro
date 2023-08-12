@@ -1,10 +1,6 @@
-import Link from "next/link";
-
-import { siteConfig } from "@/config/site";
-import { ThemeToggle } from "./theme-toggle";
-import { Github, Mountain, Twitter } from "lucide-react";
-import { Button } from "./ui/button";
 import Image from "next/image";
+import { Button } from "./ui/button";
+import { Github, Twitter } from "lucide-react";
 
 export function SiteFooter() {
   return (

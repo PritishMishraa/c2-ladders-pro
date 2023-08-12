@@ -1,8 +1,8 @@
 import Link from "next/link";
+import { Mountain } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
 import { ThemeToggle } from "./theme-toggle";
-import { Mountain } from "lucide-react";
 
 export function SiteHeader() {
   return (
