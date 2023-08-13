@@ -4,7 +4,7 @@ import { Github, Twitter } from "lucide-react";
 
 export function SiteFooter() {
   return (
-    <header className="w-full border-t bg-background">
+    <footer className="w-full border-t bg-background">
       <div className="container flex h-16 items-center justify-between space-x-4">
         <div className="mr-2 flex items-center space-x-2 md:mr-6">
           <Image
@@ -30,6 +30,6 @@ export function SiteFooter() {
           </a>
         </div>
       </div>
-    </header>
+    </footer>
   );
 }
