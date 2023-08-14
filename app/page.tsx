@@ -6,12 +6,21 @@ import { Shell } from "@/components/shell";
 import { TableShell } from "@/components/table-shell";
 
 export default function Home() {
-  const storedRating = localStorage.getItem("selectedRating");
-  const initialRating = storedRating ? parseInt(storedRating) : 1200;
-  const [rating, setRating] = useState(initialRating);
+  const [rating, setRating] = useState(1200);
+
+  useEffect(() => {
+    const savedRating = localStorage.getItem("selectedRating");
+
+    if (savedRating) {
+      setRating(parseInt(savedRating));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("selectedRating", rating.toString());
+  }, [rating]);
 
   const handleRatingChange = (newRating: number) => {
-    localStorage.setItem("selectedRating", newRating.toString());
     setRating(newRating);
   };
 

@@ -21,6 +21,10 @@ export function GoalCard({
 }) {
   const [localRating, setRating] = React.useState(rating);
 
+  React.useEffect(() => {
+    setRating(rating);
+  }, [rating]);
+
   function onClick(adjustment: number) {
     const newRating = localRating + adjustment;
     setRating(newRating);
