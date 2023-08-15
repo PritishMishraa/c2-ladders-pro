@@ -14,11 +14,7 @@ export const metadata: Metadata = {
 };
 
 async function getQuestions(rating: number) {
-  const response = await fetch(
-    `https://c2-ladders.com/api/ladder?startRating=${rating}&endRating=${
-      rating + 100
-    }`
-  );
+  const response = await fetch(`/api/question?rating=${rating}`);
 
   let { data: questions }: { data: Question[] } = await response.json();
 
