@@ -28,12 +28,17 @@ export default function UserCard() {
       `https://codeforces.com/api/user.info?handles=${user}`
     );
     const { result } = await response.json();
+    console.log(result);
+    if (result === undefined) {
+      setUserData(null);
+      return;
+    }
     const { handle, rating, rank, titlePhoto } = result[0];
     setUserData({ handle, rating, rank, titlePhoto });
   }
 
   return (
-    <div className="grid items-center gap-8 pb-8 pt-6 md:py-8 md:w-1/2 w-full h-auto">
+    <div className="grid items-center gap-8 pt-6 md:w-1/2 w-full h-auto">
       <Card>
         <CardHeader className="pb-4">
           <CardTitle className="text-base">Enter your Codeforces ID</CardTitle>

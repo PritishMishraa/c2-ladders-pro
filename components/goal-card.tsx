@@ -35,7 +35,7 @@ export default function GoalCard({
   }
 
   return (
-    <div className="grid items-center gap-8 pb-8 pt-6 md:py-8 md:w-1/2 w-full h-full">
+    <div className="grid items-center gap-8 pt-6 md:w-1/2 w-full h-full">
       <Card>
         <CardHeader className="pb-4">
           <CardTitle className="text-base">Move Rating</CardTitle>
