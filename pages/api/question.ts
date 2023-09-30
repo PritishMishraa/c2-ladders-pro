@@ -16,7 +16,7 @@ export default async function handler(
 
   try {
     const response = await fetch(
-      `https://c2-ladders.com/api/ladder?startRating=${startRating}&endRating=${endRating}`
+      `https://c2-ladders-juol.onrender.com/api/ladder?startRating=${startRating}&endRating=${endRating}`
     );
 
     if (!response.ok) {
